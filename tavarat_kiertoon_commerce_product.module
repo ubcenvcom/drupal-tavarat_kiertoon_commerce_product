@@ -9,7 +9,7 @@ function tavarat_kiertoon_commerce_product_search_api_saved_searches_new_results
 */
 
 function tavarat_kiertoon_commerce_product_commerce_product_uri($product) {
-  watchdog('tavarat_kiertoon_commerce_product', json_encode($product));
+  // watchdog('tavarat_kiertoon_commerce_product', json_encode($product));
 
   $u=sprintf('/product/%s', $product->sku);
 
