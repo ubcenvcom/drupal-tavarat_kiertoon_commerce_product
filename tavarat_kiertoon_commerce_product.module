@@ -9,14 +9,7 @@ function tavarat_kiertoon_commerce_product_search_api_saved_searches_new_results
 */
 
 function tavarat_kiertoon_commerce_product_commerce_product_uri($product) {
-  watchdog('tavarat_kiertoon_commerce_product', json_encode($product));
-
   $u=sprintf('/product/%s', $product->sku);
 
   return array('path'=>$u, 'options'=>array());
-
-  // If the product has a display context, use it entity_uri().
-  if (!empty($product->display_context)) {
-    return entity_uri($product->display_context['entity_type'], $product->display_context['entity']);
-  }
 }
